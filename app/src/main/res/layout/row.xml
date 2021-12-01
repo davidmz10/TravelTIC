@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:cardView="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="12dp"
+    android:clickable = "true"
+    android:foreground="?selectableItemBackground"
+    android:focusable="true"
+    cardView:cardBackgroundColor="#AFB5D3"
+    cardView:cardCornerRadius="20dp"
+    cardView:cardElevation="6dp"
+    cardView:contentPadding="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!--items for a single row of RecyclerView-->
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:id="@+id/itemImage"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp" />
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Name"
+            android:textStyle="bold"
+            android:layout_toEndOf="@+id/itemImage"
+            android:layout_toRightOf="@+id/itemImage"
+            android:layout_alignParentTop="true"
+            android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Descripcion"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_below="@+id/tvName"
+            android:layout_toEndOf="@+id/itemImage"
+            android:layout_toRightOf="@+id/itemImage"/>
+        <TextView
+            android:id="@+id/tvPoints"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="points"
+            android:textColor="#000"
+            android:textSize="15sp"
+            android:layout_below="@+id/tvDescription"
+            android:layout_toEndOf="@+id/itemImage"
+            android:layout_toRightOf="@+id/itemImage"/>
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
